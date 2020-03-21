@@ -6,10 +6,10 @@ import domain.Course;
 
 public interface CourseService {
 	
-	Course findStudentById(Integer id);
+	Course findCourseById(Integer id);
 	
-	List<Course> findAllStudents();
+	List<Course> findAllCourses();
 	
-	Course saveStudent(Course student);
+	Course saveCourse(Course course);
 
 }

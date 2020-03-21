@@ -2,6 +2,8 @@ package repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface StudentRepository extends JpaRepository<StudentRepository, Integer> {
+import domain.Student;
+
+public interface StudentRepository extends JpaRepository<Student, Integer> {
 
 }
