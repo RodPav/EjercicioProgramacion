@@ -1,12 +1,12 @@
-package Services;
+package com.people.EjercicioProgramacion.services;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import domain.Student;
-import repositories.StudentRepository;
+import com.people.EjercicioProgramacion.domain.Student;
+import com.people.EjercicioProgramacion.repositories.StudentRepository;
 
 @Service
 public class StudentServiceImpl implements StudentService {

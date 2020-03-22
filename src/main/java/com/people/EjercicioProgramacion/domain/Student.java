@@ -1,5 +1,6 @@
-package domain;
+package com.people.EjercicioProgramacion.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,13 +22,18 @@ public class Student {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
+	@Column(name= "rut")
 	private String rut;
 
+	@Column(name= "name")
 	private String name;
 
+	@Column(name= "last_name")
 	private String lastName;
 
+	@Column(name= "age")
 	private int age;
 
+	@Column(name= "course")
 	private int course;
 }

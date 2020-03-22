@@ -1,8 +1,8 @@
-package Services;
+package com.people.EjercicioProgramacion.services;
 
 import java.util.List;
 
-import domain.Student;
+import com.people.EjercicioProgramacion.domain.Student;
 
 public interface StudentService {
 	
