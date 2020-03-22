@@ -3,6 +3,7 @@ package com.people.EjercicioProgramacion.controller;
 import java.util.List;
 
 import javax.persistence.EntityNotFoundException;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,27 +20,28 @@ import com.people.EjercicioProgramacion.domain.Course;
 import com.people.EjercicioProgramacion.services.CourseService;
 
 @RestController
+@RequestMapping("/courses")
 public class CourseController {
 
 	@Autowired
 	private CourseService courseService;
 
-	@GetMapping("/courses")
+	@GetMapping
 	public List<Course> getCourses() {
 	
 		return courseService.findAllCourses();
 
 	}
 
-	@GetMapping("courses/{id}")
+	@GetMapping("/{id}")
 	public Course getCourseById(@PathVariable Integer id) {
-		// return courseService.findCourseById(id);
+		
 		return courseService.findCourseById(id);
 	}
 
-	@PostMapping("/courses")
+	@PostMapping
 	public Course setCourse(@RequestBody Course course) {
-		// return courseService.saveCourse(Course);
+		
 		return courseService.saveCourse(course);
 	}
 }

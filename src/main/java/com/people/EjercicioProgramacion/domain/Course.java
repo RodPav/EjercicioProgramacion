@@ -7,26 +7,23 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.Data;
-
 /**
  * @author rodrigo
  *
  */
-@Data
+
 @Entity
 @Table(name = "COURSE")
 public class Course {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name= "id")
 	private int id;
-	
-	@Column(name= "name")
+
+	@Column(nullable = false, length = 20)
 	private String name;
-	
-	@Column(name= "code")
+
+	@Column(nullable = false, length = 4)
 	private String code;
 
 	public int getId() {
@@ -53,6 +50,4 @@ public class Course {
 		this.code = code;
 	}
 
-	
-	
 }

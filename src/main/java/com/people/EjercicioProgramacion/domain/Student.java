@@ -7,13 +7,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.Data;
-
 /**
  * @author rodrigo
  *
  */
-@Data
 @Entity
 @Table(name = "STUDENT")
 public class Student {
@@ -22,18 +19,67 @@ public class Student {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
-	@Column(name= "rut")
+	@Column(unique = true, nullable = false, length = 12)
 	private String rut;
 
-	@Column(name= "name")
+	@Column(nullable = false, length = 20)
 	private String name;
 
-	@Column(name= "last_name")
+	@Column(nullable = false, length = 20)
 	private String lastName;
 
-	@Column(name= "age")
+	@Column(nullable = false)
 	private int age;
 
-	@Column(name= "course")
+	@Column(nullable = false)
 	private int course;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getRut() {
+		return rut;
+	}
+
+	public void setRut(String rut) {
+		this.rut = rut;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public int getCourse() {
+		return course;
+	}
+
+	public void setCourse(int course) {
+		this.course = course;
+	}
+
 }

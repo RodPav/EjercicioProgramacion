@@ -14,23 +14,23 @@ import com.people.EjercicioProgramacion.domain.Student;
 import com.people.EjercicioProgramacion.services.StudentService;
 
 @RestController
-@RequestMapping("/app/v1")
+@RequestMapping("/students")
 public class StudentController {
 
 	@Autowired
 	private StudentService studentService;
 	
-	@GetMapping("/students")
+	@GetMapping
 	public List<Student> getStudents(){
 		return studentService.findAllStudents();
 	}
 	
-	@GetMapping("students/{id}")
+	@GetMapping("/{id}")
 	public Student getStudentById(@PathVariable Integer id) {
 		return studentService.findStudentById(id);
 	}
 	
-	@PostMapping("/students")
+	@PostMapping
 	public Student setStudent(@RequestBody Student student) {
 		return studentService.saveStudent(student);
 	}
