@@ -12,4 +12,8 @@ public interface CourseService {
 	
 	Course saveCourse(Course course);
 
+	Course updateCourse(Course newCourse, Integer id);
+
+	void deleteCourse(Integer id);
+
 }

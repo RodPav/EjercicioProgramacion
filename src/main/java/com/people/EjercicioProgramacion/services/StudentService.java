@@ -12,5 +12,9 @@ public interface StudentService {
 	
 	Student saveStudent(Student student);
 
+	Student updateStudent(Student newStudent, Integer id);
+
+	void deleteStudent(Integer id);
+
 
 }
